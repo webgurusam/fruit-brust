@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Brust</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+
+    <!-- stylesheet for daisyui & tailwind elements & tailwindcss -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- stylesheet for google fonts : lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+
+    <!-- custom tailwindcss config script -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'primary-color': '#700',
+            }
+            }
+          }
+        }
+    </script>
+
+    <!-- custom vanilla stylesheet -->
+    <style>
+        .lato{
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+
+</head>
+<body class="lato">
+    
+    <h1 class="text-blue-700">hello world!!!</h1>
+
+    <!-- tailwind elements scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+</body>
+</html>
