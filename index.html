@@ -19,13 +19,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 
 
+    <!-- merakiui elements script -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
     <!-- custom tailwindcss config script -->
     <script>
         tailwind.config = {
           theme: {
             extend: {
               colors: {
-                'primary-color': '#700',
+                'primary-bg-color': '#F85559',
+                'mobile-primary-txt-color': '#121212',
             }
             }
           }
@@ -42,7 +46,63 @@
 </head>
 <body class="lato">
     
-    <h1 class="text-blue-700">hello world!!!</h1>
+    <!-- header section starts here -->
+    <header>
+      <div class="container mx-auto lg:bg-primary-bg-color rounded-full mb-7 lg:mb-14 mt-12 md:px-2 lg:px-0">
+        <nav x-data="{ isOpen: false }" class="relative">
+          <div class="container px-0 py-3 lg:px-12 lg:py-8 mx-auto lg:flex">
+              <div class="flex items-center justify-between">
+                  <div class="lg:hidden">
+                    <a href="#" class="flex items-center">
+                        <img class="w-7 h-8 lg:w-9 lg:h-16 sm:h-7" src="./images/logo.png" alt="">
+                        <span class="ml-2 lg:ml-5 text-mobile-primary-txt-color lg:text-white font-bold text-xl lg:text-4xl">Fruit Burst</span>
+                    </a>
+                  </div>
+                  <!-- Mobile menu button -->
+                  <div class="flex lg:hidden">
+                      <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                          
+                        <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25" stroke="#121212" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    
+                        <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                          
+                      </button>
+                  </div>
+              </div>
+      
+              <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+              <div x-cloak :class="[isOpen ? 'opacity-90 translate-x-0 ' : '-translate-x-[200%] opacity-0']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out mt-[12px] lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between bg-[#f85559]">
+                  <div class="flex flex-col px-2 lg:px-0 -mx-4 lg:flex-row lg:mx-10 xl:mx-0 lg:py-0 lg:space-x-7">
+                      <a href="#" class="px-2.5 lg:px-0 py-2 text-lg font-medium text-white transition-colors duration-300 transform hover:text-gray-200 lg:mx-2 xl:mx-0">Home</a>
+                      <a href="#" class="px-2.5 lg:px-0 py-2 text-lg font-medium text-white transition-colors duration-300 transform hover:text-gray-200 lg:mx-2 xl:mx-0">About Us</a>
+                      <a href="#" class="px-2.5 lg:px-0 py-2 text-lg font-medium text-white transition-colors duration-300 transform hover:text-gray-200 lg:mx-2 xl:mx-0">Shop</a>
+                      <a href="#" class="px-2.5 lg:px-0 py-2 text-lg font-medium text-white transition-colors duration-300 transform hover:text-gray-200 lg:mx-2 xl:mx-0">All Fruits</a>
+                  </div>
+                  <div class="hidden lg:block">
+                    <a href="#" class="flex items-center">
+                        <img class="w-9 h-16 lg:w-auto lg:h-auto sm:h-7" src="./images/logo.png" alt="">
+                        <span class="ml-5 text-white font-bold text-4xl">Fruit Burst</span>
+                    </a>
+                  </div>
+                  <div class="relative mt-4 lg:mt-0">
+                      <span class="absolute inset-y-0 right-0 flex items-center pr-4">
+                          <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+                              <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                      </span>
+      
+                      <input type="text" class="w-full lg:w-[400px] py-2 pl-4 pr-4 text-gray-700 bg-white border rounded-full  focus:border-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search here">
+                  </div>
+              </div>
+          </div>
+        </nav>
+      </div>
+    </header>  
+    <!-- header section ends here -->
 
     <!-- tailwind elements scripts -->
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
