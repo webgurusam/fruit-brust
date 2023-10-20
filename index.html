@@ -36,6 +36,17 @@
         }
     </script>
 
+    <!-- tailwindcss carousel init script -->
+    <script>
+      // Initialization for ES Users
+      import {
+        Carousel,
+        initTE,
+      } from "tw-elements";
+
+      initTE({ Carousel });
+    </script>
+
     <!-- custom vanilla stylesheet -->
     <style>
         .lato{
@@ -48,6 +59,7 @@
     
     <!-- header section starts here -->
     <header>
+      <!-- navbar starts here -->
       <div class="container mx-auto lg:bg-primary-bg-color rounded-full mb-7 lg:mb-14 mt-12 md:px-2 lg:px-0">
         <nav x-data="{ isOpen: false }" class="relative">
           <div class="container px-0 py-3 lg:px-12 lg:py-8 mx-auto lg:flex">
@@ -100,6 +112,149 @@
               </div>
           </div>
         </nav>
+      </div>
+      <!-- navbar ends here -->
+      <div class="container mx-auto md:px-2 lg:px-0">
+        <div
+          id="carouselExampleCaptions"
+          class="relative"
+          data-te-carousel-init
+          data-te-ride="carousel">
+          <!--Carousel indicators-->
+          <div
+            class="absolute hidden bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4  list-none justify-center p-0"
+            data-te-carousel-indicators>
+            <button
+              type="button"
+              data-te-target="#carouselExampleCaptions"
+              data-te-slide-to="0"
+              data-te-carousel-active
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-current="true"
+              aria-label="Slide 1"></button>
+            <button
+              type="button"
+              data-te-target="#carouselExampleCaptions"
+              data-te-slide-to="1"
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-label="Slide 2"></button>
+            <button
+              type="button"
+              data-te-target="#carouselExampleCaptions"
+              data-te-slide-to="2"
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-label="Slide 3"></button>
+          </div>
+
+          <!--Carousel items-->
+          <div
+            class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+            <!--First item-->
+            <div
+              class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-active
+              data-te-carousel-item
+              style="backface-visibility: hidden">
+              <img
+                src="./images/banner1.png"
+                class="block w-full"
+                alt="..." />
+              <div
+                class="absolute inset-x-[15%] bottom-5 hidden pb-3 lg:pb-52 text-center text-white md:block">
+                <h5 class="text-2xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h5>
+                <p class="mt-1 lg:mt-6 mb-4 lg:mb-8 lg:font-medium text-sm lg:text-xl">
+                  We supply highly quality organic products
+                </p>
+                <button class="btn bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
+              </div>
+            </div>
+            <!--Second item-->
+            <div
+              class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-item
+              style="backface-visibility: hidden">
+              <img
+                src="./images/banner2.png"
+                class="block w-full"
+                alt="..." />
+              <div
+                class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                <h5 class="text-xl">Exotic tastes at your doorstep</h5>
+                <p>
+                  We supply highly quality organic products
+                </p>
+              </div>
+            </div>
+            <!--Third item-->
+            <div
+              class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-item
+              style="backface-visibility: hidden">
+              <img
+                src="./images/banner3.png"
+                class="block w-full"
+                alt="..." />
+              <div
+                class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                <h5 class="text-xl">Exotic tastes at your doorstep</h5>
+                <p>
+                  We supply highly quality organic products
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--Carousel controls - prev item-->
+          <button
+            class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white hover:text-white hover:no-underline hover:outline-none focus:text-white focus:no-underline focus:outline-none motion-reduce:transition-none"
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide="prev">
+            <span class="bg-mobile-primary-txt-color h-6 w-6 lg:h-14 lg:w-14 flex items-center justify-center rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="currentColor"
+                class="h-3 w-3 lg:h-7 lg:w-7">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+            </span>
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Previous</span
+            >
+          </button>
+          <!--Carousel controls - next item-->
+          <button
+            class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white hover:text-white hover:no-underline hover:outline-none focus:text-white focus:no-underline focus:outline-none motion-reduce:transition-none"
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide="next">
+            <span class="bg-mobile-primary-txt-color h-6 w-6 lg:h-14 lg:w-14 flex items-center justify-center rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="currentColor"
+                class="h-3 w-3 lg:h-7 lg:w-7">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </span>
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Next</span
+            >
+          </button>
+        </div>
       </div>
     </header>  
     <!-- header section ends here -->
