@@ -52,6 +52,14 @@
         .lato{
             font-family: 'Lato', sans-serif;
         }
+        .overlay{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, #121212 -14.42%, rgba(18, 18, 18, 0.00) 100%);
+          bottom: 0;
+          border-radius: 8px;
+        }
     </style>
 
 </head>
@@ -87,7 +95,7 @@
               </div>
       
               <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-              <div x-cloak :class="[isOpen ? 'opacity-90 translate-x-0 ' : '-translate-x-[200%] opacity-0']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out mt-[12px] lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between bg-[#f85559]">
+              <div x-cloak :class="[isOpen ? 'opacity-100 translate-x-0 ' : '-translate-x-[200%] opacity-0']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out mt-[12px] lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between bg-[#f85559] h-[45vh] lg:h-auto">
                   <div class="flex flex-col px-2 lg:px-0 -mx-4 lg:flex-row lg:mx-10 xl:mx-0 lg:py-0 lg:space-x-7">
                       <a href="#" class="px-2.5 lg:px-0 py-2 text-lg font-medium text-white transition-colors duration-300 transform hover:text-gray-200 lg:mx-2 xl:mx-0">Home</a>
                       <a href="#" class="px-2.5 lg:px-0 py-2 text-lg font-medium text-white transition-colors duration-300 transform hover:text-gray-200 lg:mx-2 xl:mx-0">About Us</a>
@@ -114,6 +122,8 @@
         </nav>
       </div>
       <!-- navbar ends here -->
+
+      <!-- banner starts here -->
       <div class="container mx-auto md:px-2 lg:px-0">
         <div
           id="carouselExampleCaptions"
@@ -144,6 +154,12 @@
               data-te-slide-to="2"
               class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
               aria-label="Slide 3"></button>
+              <button
+              type="button"
+              data-te-target="#carouselExampleCaptions"
+              data-te-slide-to="3"
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-label="Slide 4"></button>
           </div>
 
           <!--Carousel items-->
@@ -151,17 +167,18 @@
             class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
             <!--First item-->
             <div
-              class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              class="relative float-left -mr-[100%] w-full h-60 sm:h-auto transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
               data-te-carousel-active
               data-te-carousel-item
               style="backface-visibility: hidden">
               <img
                 src="./images/banner1.png"
-                class="block w-full"
+                class="block w-full h-60 sm:h-auto rounded-lg"
                 alt="..." />
+              <div class="overlay"></div>
               <div
-                class="absolute inset-x-[15%] bottom-5 hidden pb-3 lg:pb-52 text-center text-white md:block">
-                <h5 class="text-2xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h5>
+                class="absolute inset-x-[15%] bottom-5 pb-3 md:pb-16 lg:pb-52 text-center text-white">
+                <h5 class="text-2xl md:text-5xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h5>
                 <p class="mt-1 lg:mt-6 mb-4 lg:mb-8 lg:font-medium text-sm lg:text-xl">
                   We supply highly quality organic products
                 </p>
@@ -170,36 +187,59 @@
             </div>
             <!--Second item-->
             <div
-              class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              class="relative float-left -mr-[100%] hidden w-full h-60 sm:h-auto transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
               data-te-carousel-item
               style="backface-visibility: hidden">
               <img
                 src="./images/banner2.png"
-                class="block w-full"
+                class="block w-full h-60 sm:h-auto rounded-lg"
                 alt="..." />
+              <div class="overlay"></div>
               <div
-                class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                <h5 class="text-xl">Exotic tastes at your doorstep</h5>
-                <p>
+                class="absolute inset-x-[15%] bottom-5 pb-3 md:pb-16 lg:pb-52 text-center text-white">
+                <h5 class="text-2xl md:text-5xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h5>
+                <p class="mt-1 lg:mt-6 mb-4 lg:mb-8 lg:font-medium text-sm lg:text-xl">
                   We supply highly quality organic products
                 </p>
+                <button class="btn bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
               </div>
             </div>
             <!--Third item-->
             <div
-              class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              class="relative float-left -mr-[100%] hidden w-full h-60 sm:h-auto transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
               data-te-carousel-item
               style="backface-visibility: hidden">
               <img
                 src="./images/banner3.png"
-                class="block w-full"
+                class="block w-full h-60 sm:h-auto rounded-lg"
                 alt="..." />
+              <div class="overlay"></div>
               <div
-                class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                <h5 class="text-xl">Exotic tastes at your doorstep</h5>
-                <p>
+                class="absolute inset-x-[15%] bottom-5 pb-3 md:pb-16 lg:pb-52 text-center text-white">
+                <h5 class="text-2xl md:text-5xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h5>
+                <p class="mt-1 lg:mt-6 mb-4 lg:mb-8 lg:font-medium text-sm lg:text-xl">
                   We supply highly quality organic products
                 </p>
+                <button class="btn bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
+              </div>
+            </div>
+            <!--Four item-->
+            <div
+              class="relative float-left -mr-[100%] hidden w-full h-60 sm:h-auto transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-item
+              style="backface-visibility: hidden">
+              <img
+                src="./images/banner4.png"
+                class="block w-full h-60 sm:h-auto rounded-lg"
+                alt="..." />
+              <div class="overlay"></div>
+              <div
+                class="absolute inset-x-[15%] bottom-5 pb-3 md:pb-16 lg:pb-52 text-center text-white">
+                <h5 class="text-2xl md:text-5xl lg:text-7xl font-extrabold">Exotic tastes at your doorstep</h5>
+                <p class="mt-1 lg:mt-6 mb-4 lg:mb-8 lg:font-medium text-sm lg:text-xl">
+                  We supply highly quality organic products
+                </p>
+                <button class="btn bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
               </div>
             </div>
           </div>
@@ -256,6 +296,7 @@
           </button>
         </div>
       </div>
+      <!-- banner ends here -->
     </header>  
     <!-- header section ends here -->
 
