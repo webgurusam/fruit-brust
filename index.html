@@ -10,8 +10,8 @@
 
     <!-- stylesheet for daisyui & tailwind elements & tailwindcss -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.1/dist/full.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
 
     <!-- stylesheet for google fonts : lato -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,6 +59,13 @@
           background: linear-gradient(180deg, #121212 -14.42%, rgba(18, 18, 18, 0.00) 100%);
           bottom: 0;
           border-radius: 8px;
+        }
+        hr{
+          color: #0C0C0C1A;
+        }
+        .modal-action > :not([hidden]) ~ :not([hidden]){
+          margin-left: 0;
+          margin-right: 0;
         }
     </style>
 
@@ -182,7 +189,7 @@
                 <p class="mt-1 lg:mt-6 mb-4 lg:mb-8 lg:font-medium text-sm lg:text-xl">
                   We supply highly quality organic products
                 </p>
-                <button class="btn bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
+                <button class="btn capitalize bg-primary-bg-color capitalize text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
               </div>
             </div>
             <!--Second item-->
@@ -201,7 +208,7 @@
                 <p class="mt-1 lg:mt-6 mb-4 lg:mb-8 lg:font-medium text-sm lg:text-xl">
                   We supply highly quality organic products
                 </p>
-                <button class="btn bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
+                <button class="btn capitalize bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
               </div>
             </div>
             <!--Third item-->
@@ -220,7 +227,7 @@
                 <p class="mt-1 lg:mt-6 mb-4 lg:mb-8 lg:font-medium text-sm lg:text-xl">
                   We supply highly quality organic products
                 </p>
-                <button class="btn bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
+                <button class="btn capitalize bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
               </div>
             </div>
             <!--Four item-->
@@ -239,7 +246,7 @@
                 <p class="mt-1 lg:mt-6 mb-4 lg:mb-8 lg:font-medium text-sm lg:text-xl">
                   We supply highly quality organic products
                 </p>
-                <button class="btn bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
+                <button class="btn capitalize bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
               </div>
             </div>
           </div>
@@ -301,7 +308,7 @@
     <!-- header section ends here -->
 
     <!-- main section starts here -->
-    <main class="relative -top-32">
+    <main class="relative lg:-top-32">
       <!-- featured fruits starts here -->
       <section class="hidden lg:block">
         <div style="box-shadow: 0px 8px 60px 0px rgba(0, 0, 0, 0.05);" class="max-w-6xl mx-auto rounded-lg py-12 px-16 flex items-center justify-center gap-20 bg-white">
@@ -338,10 +345,203 @@
         </div>
       </section>
       <!-- featured fruits ends here -->
+
+      <!-- deal of the day starts here -->
+      <section class="container mx-auto md:px-2 lg:px-0 mt-6 lg:mt-36 mb-6 lg:mb-2">
+        <div class="flex flex-wrap justify-center lg:justify-between lg:mb-12">
+          <!-- section title & description starts here -->
+          <div class="max-w-[615px] text-center lg:text-left">
+            <h2 class="font-extrabold text-xl lg:text-5xl text-mobile-primary-txt-color mb-2 lg:mb-6">Deal of the day</h2>
+            <p class="font-medium text-sm text-[#12121263]">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+          </div>
+          <!-- countdown starts here -->
+          <div class="flex items-center justify-center my-5 lg:my-0">
+              <div class="w-full sm:max-w-2xl text-white">
+                  <div id="new" class="">
+                      <div class="flex items-center justify-around text-center gap-4 lg:gap-6">
+                          <div >
+                              <h2 id="day" class="font-extrabold text-2xl lg:text-5xl text-mobile-primary-txt-color">30</h2>
+                              <p class="font-medium text-[9px] text-[#12121263]">days</p>
+                          </div>
+
+                          <span class="relative -top-0.5 lg:-top-3 text-mobile-primary-txt-color">&vellip;</span>
+
+                          <div>
+                              <h2 id="hour" class="font-extrabold text-2xl lg:text-5xl text-mobile-primary-txt-color">20</h2>
+                              <p class="font-medium text-[9px] text-[#12121263]">Hours</p>
+                          </div>
+
+                          <span class="relative -top-0.5 lg:-top-3 text-mobile-primary-txt-color">&vellip;</span>
+
+                          <div>
+                              <h2 id="minute" class="font-extrabold text-2xl lg:text-5xl text-mobile-primary-txt-color">59</h2>
+                              <p class="font-medium text-[9px] text-[#12121263]">Minutes</p>
+                          </div>
+
+                          <span class="relative -top-0.5 lg:-top-3 text-mobile-primary-txt-color">&vellip;</span>
+
+                          <div>
+                              <h2 id="second" class="font-extrabold text-2xl lg:text-5xl text-mobile-primary-txt-color">40</h2>
+                              <p class="font-medium text-[9px] text-[#12121263]">Seconds</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!-- fruit items starts here -->
+        <div class="flex flex-wrap gap-4 lg:gap-6 mb-6 lg:mb-12">
+          <div class="flex-1 border rounded-lg p-12">
+            <div class="space-y-12 mb-6 text-center">
+              <img class="mx-auto" src="./images/fruit6.png" alt="">
+              <h1 class="text-2xl font-bold text-mobile-primary-txt-color">12.90$ - 18.85$</h1>
+              <hr>
+              <p class="font-medium text-[#12121263]">Apples</p>
+            </div>
+        
+            <div class="flex flex-col items-center">
+                <div class="rating rating-sm rating-half mb-8">
+                  <input type="radio" name="rating-1" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-1" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-1" class="bg-primary-bg-color mask mask-star-2 mask-half-1" checked />
+                  <input type="radio" name="rating-1" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-1" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-1" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-1" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-1" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-1" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-1" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                </div>
+                <!-- rating ends here -->
+
+                <!-- modal 1 starts here -->
+                <button class="text-primary-bg-color text-lg font-bold" onclick="my_modal_1.showModal()">Details</button>
+
+                <dialog id="my_modal_1" class="modal">
+                  <div class="modal-box max-w-[51rem] py-16 px-48">
+                    <div class="flex-1 rounded-3xl w-[415px]">
+                      <div class="space-y-6 mb-8 text-center">
+                        <img class="mx-auto w-80 h-80 object-contain" src="./images/fruit6.png" alt="">
+                        <h1 class="text-4xl font-extrabold text-mobile-primary-txt-color">Apples</h1>
+                        <p class="font-medium text-[#2E2E2E99]">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                      </div>
+                      <!-- fruits content ends here -->
+                      <div class="flex justify-center">
+                          <div class="rating rating-md rating-half">
+                            <input type="radio" name="rating-5" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-5" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-5" class="bg-primary-bg-color mask mask-star-2 mask-half-1" checked />
+                            <input type="radio" name="rating-5" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-5" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-5" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-5" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-5" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-5" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-5" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                          </div>
+                      </div>
+                       <!-- rating ends here -->
+                      <div class="modal-action justify-center gap-8 mt-10">
+                        <form method="dialog">
+                          <!-- if there is a button in form, it will close the modal -->
+                          <button class="btn capitalize hover:bg-primary-bg-color text-primary-bg-color bg-white hover:text-white border border-primary-bg-color hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Close</button>
+                        </form>
+                        <button class="btn capitalize hover:bg-white bg-primary-bg-color text-white border hover:border-primary-bg-color hover:text-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </dialog>
+                <!-- modal 1 ends here -->
+            </div>
+          </div>
+          <!-- fruit card 1 -->
+          <div class="flex-1 border rounded-lg p-12">
+            <div class="space-y-12 mb-6 text-center">
+              <img class="mx-auto" src="./images/fruit7.png" alt="">
+              <h1 class="text-2xl font-bold text-mobile-primary-txt-color">12.90$ - 18.85$</h1>
+              <hr>
+              <p class="font-medium text-[#12121263]">Orange</p>
+            </div>
+        
+            <div class="flex flex-col items-center">
+                <div class="rating rating-sm rating-half mb-8">
+                  <input type="radio" name="rating-2" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-2" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-2" class="bg-primary-bg-color mask mask-star-2 mask-half-1" checked />
+                  <input type="radio" name="rating-2" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-2" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-2" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-2" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-2" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-2" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-2" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                </div>
+                <button class="text-primary-bg-color text-lg font-bold">Details</button>
+            </div>
+          </div>
+          <!-- fruit card 2 -->
+          <div class="flex-1 border rounded-lg p-12">
+            <div class="space-y-12 mb-6 text-center">
+              <img class="mx-auto" src="./images/fruit8.png" alt="">
+              <h1 class="text-2xl font-bold text-mobile-primary-txt-color">12.90$ - 18.85$</h1>
+              <hr>
+              <p class="font-medium text-[#12121263]">Red Dragon</p>
+            </div>
+        
+            <div class="flex flex-col items-center">
+                <div class="rating rating-sm rating-half mb-8">
+                  <input type="radio" name="rating-3" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-3" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-3" class="bg-primary-bg-color mask mask-star-2 mask-half-1" checked />
+                  <input type="radio" name="rating-3" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-3" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-3" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-3" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-3" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-3" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-3" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                </div>
+                <button class="text-primary-bg-color text-lg font-bold">Details</button>
+            </div>
+          </div>
+          <!-- fruit card 3 -->
+          <div class="flex-1 border rounded-lg p-12">
+            <div class="space-y-12 mb-6 text-center">
+              <img class="mx-auto" src="./images/fruit9.png" alt="">
+              <h1 class="text-2xl font-bold text-mobile-primary-txt-color">12.90$ - 18.85$</h1>
+              <hr>
+              <p class="font-medium text-[#12121263]">Banana</p>
+            </div>
+        
+            <div class="flex flex-col items-center">
+                <div class="rating rating-sm rating-half mb-8">
+                  <input type="radio" name="rating-4" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-4" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-4" class="bg-primary-bg-color mask mask-star-2 mask-half-1" checked />
+                  <input type="radio" name="rating-4" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-4" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-4" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-4" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-4" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-4" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-4" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                </div>
+                <button class="text-primary-bg-color text-lg font-bold">Details</button>
+            </div>
+          </div>
+          <!-- fruit card 4 -->
+        </div>
+        <!-- shop all button starts here -->
+        <div class="flex justify-center">
+          <button class="btn capitalize bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop All</button>
+        </div>
+      </section>
+      <!-- deal of the day ends here -->
     </main>
     <!-- main section ends here -->
 
-    <!-- tailwind elements scripts -->
+    <!-- tailwind elements & countdown scripts -->
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script src="./countdown.js"></script>
 </body>
 </html>
