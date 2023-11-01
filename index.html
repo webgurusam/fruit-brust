@@ -189,7 +189,7 @@
                 <p class="mt-1 lg:mt-6 mb-4 lg:mb-8 lg:font-medium text-sm lg:text-xl">
                   We supply highly quality organic products
                 </p>
-                <button class="btn capitalize bg-primary-bg-color capitalize text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
+                <button class="btn capitalize hover:bg-white bg-primary-bg-color text-white border border-transparent hover:border-primary-bg-color hover:text-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
               </div>
             </div>
             <!--Second item-->
@@ -208,7 +208,7 @@
                 <p class="mt-1 lg:mt-6 mb-4 lg:mb-8 lg:font-medium text-sm lg:text-xl">
                   We supply highly quality organic products
                 </p>
-                <button class="btn capitalize bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
+                <button class="btn capitalize hover:bg-white bg-primary-bg-color text-white border border-transparent hover:border-primary-bg-color hover:text-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
               </div>
             </div>
             <!--Third item-->
@@ -227,7 +227,7 @@
                 <p class="mt-1 lg:mt-6 mb-4 lg:mb-8 lg:font-medium text-sm lg:text-xl">
                   We supply highly quality organic products
                 </p>
-                <button class="btn capitalize bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
+                <button class="btn capitalize hover:bg-white bg-primary-bg-color text-white border border-transparent hover:border-primary-bg-color hover:text-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
               </div>
             </div>
             <!--Four item-->
@@ -246,7 +246,7 @@
                 <p class="mt-1 lg:mt-6 mb-4 lg:mb-8 lg:font-medium text-sm lg:text-xl">
                   We supply highly quality organic products
                 </p>
-                <button class="btn capitalize bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
+                <button class="btn capitalize hover:bg-white bg-primary-bg-color text-white border border-transparent hover:border-primary-bg-color hover:text-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop Now</button>
               </div>
             </div>
           </div>
@@ -418,10 +418,10 @@
                 <button class="text-primary-bg-color text-lg font-bold" onclick="my_modal_1.showModal()">Details</button>
 
                 <dialog id="my_modal_1" class="modal">
-                  <div class="modal-box max-w-[51rem] py-16 px-48">
-                    <div class="flex-1 rounded-3xl w-[415px]">
+                  <div class="modal-box w-auto max-w-[20rem] md:max-w-[51rem] py-5 md:py-10 lg:py-16 px-6 md:px-36 lg:px-48">
+                    <div class="flex-1 rounded-3xl w-[16rem] md:w-[25rem]">
                       <div class="space-y-6 mb-8 text-center">
-                        <img class="mx-auto w-80 h-80 object-contain" src="./images/fruit6.png" alt="">
+                        <img class="mx-auto w-40 md:w-64 lg:w-80 h-40 md:h-64 lg:h-80 object-contain" src="./images/fruit6.png" alt="">
                         <h1 class="text-4xl font-extrabold text-mobile-primary-txt-color">Apples</h1>
                         <p class="font-medium text-[#2E2E2E99]">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                       </div>
@@ -444,7 +444,7 @@
                       <div class="modal-action justify-center gap-8 mt-10">
                         <form method="dialog">
                           <!-- if there is a button in form, it will close the modal -->
-                          <button class="btn capitalize hover:bg-primary-bg-color text-primary-bg-color bg-white hover:text-white border border-primary-bg-color hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Close</button>
+                          <button class="btn capitalize hover:bg-primary-bg-color text-primary-bg-color bg-white hover:text-white border border-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Close</button>
                         </form>
                         <button class="btn capitalize hover:bg-white bg-primary-bg-color text-white border hover:border-primary-bg-color hover:text-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Buy Now</button>
                       </div>
@@ -476,7 +476,46 @@
                   <input type="radio" name="rating-2" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
                   <input type="radio" name="rating-2" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
                 </div>
-                <button class="text-primary-bg-color text-lg font-bold">Details</button>
+                <!-- rating ends here -->
+
+                <!-- modal 2 starts here -->
+                <button class="text-primary-bg-color text-lg font-bold" onclick="my_modal_2.showModal()">Details</button>
+
+                <dialog id="my_modal_2" class="modal">
+                  <div class="modal-box w-auto max-w-[20rem] md:max-w-[51rem] py-5 md:py-10 lg:py-16 px-6 md:px-36 lg:px-48">
+                    <div class="flex-1 rounded-3xl w-[16rem] md:w-[25rem]">
+                      <div class="space-y-6 mb-8 text-center">
+                        <img class="mx-auto w-40 md:w-64 lg:w-80 h-40 md:h-64 lg:h-80 object-contain" src="./images/fruit7.png" alt="">
+                        <h1 class="text-4xl font-extrabold text-mobile-primary-txt-color">Orange</h1>
+                        <p class="font-medium text-[#2E2E2E99]">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                      </div>
+                      <!-- fruits content ends here -->
+                      <div class="flex justify-center">
+                          <div class="rating rating-md rating-half">
+                            <input type="radio" name="rating-6" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-6" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-6" class="bg-primary-bg-color mask mask-star-2 mask-half-1" checked />
+                            <input type="radio" name="rating-6" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-6" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-6" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-6" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-6" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-6" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-6" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                          </div>
+                      </div>
+                       <!-- rating ends here -->
+                      <div class="modal-action justify-center gap-8 mt-10">
+                        <form method="dialog">
+                          <!-- if there is a button in form, it will close the modal -->
+                          <button class="btn capitalize hover:bg-primary-bg-color text-primary-bg-color bg-white hover:text-white border border-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Close</button>
+                        </form>
+                        <button class="btn capitalize hover:bg-white bg-primary-bg-color text-white border hover:border-primary-bg-color hover:text-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </dialog>
+                <!-- modal 2 ends here -->
             </div>
           </div>
           <!-- fruit card 2 -->
@@ -501,7 +540,46 @@
                   <input type="radio" name="rating-3" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
                   <input type="radio" name="rating-3" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
                 </div>
-                <button class="text-primary-bg-color text-lg font-bold">Details</button>
+                <!-- rating ends here -->
+
+                <!-- modal 3 starts here -->
+                <button class="text-primary-bg-color text-lg font-bold" onclick="my_modal_3.showModal()">Details</button>
+
+                <dialog id="my_modal_3" class="modal">
+                  <div class="modal-box w-auto max-w-[20rem] md:max-w-[51rem] py-5 md:py-10 lg:py-16 px-6 md:px-36 lg:px-48">
+                    <div class="flex-1 rounded-3xl w-[16rem] md:w-[25rem]">
+                      <div class="space-y-6 mb-8 text-center">
+                        <img class="mx-auto w-40 md:w-64 lg:w-80 h-40 md:h-64 lg:h-80 object-contain" src="./images/fruit8.png" alt="">
+                        <h1 class="text-4xl font-extrabold text-mobile-primary-txt-color">Red Dragon</h1>
+                        <p class="font-medium text-[#2E2E2E99]">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                      </div>
+                      <!-- fruits content ends here -->
+                      <div class="flex justify-center">
+                          <div class="rating rating-md rating-half">
+                            <input type="radio" name="rating-7" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-7" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-7" class="bg-primary-bg-color mask mask-star-2 mask-half-1" checked />
+                            <input type="radio" name="rating-7" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-7" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-7" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-7" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-7" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-7" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-7" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                          </div>
+                      </div>
+                       <!-- rating ends here -->
+                      <div class="modal-action justify-center gap-8 mt-10">
+                        <form method="dialog">
+                          <!-- if there is a button in form, it will close the modal -->
+                          <button class="btn capitalize hover:bg-primary-bg-color text-primary-bg-color bg-white hover:text-white border border-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Close</button>
+                        </form>
+                        <button class="btn capitalize hover:bg-white bg-primary-bg-color text-white border hover:border-primary-bg-color hover:text-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </dialog>
+                <!-- modal 3 ends here -->
             </div>
           </div>
           <!-- fruit card 3 -->
@@ -526,14 +604,53 @@
                   <input type="radio" name="rating-4" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
                   <input type="radio" name="rating-4" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
                 </div>
-                <button class="text-primary-bg-color text-lg font-bold">Details</button>
+                <!-- rating ends here -->
+
+                <!-- modal 4 starts here -->
+                <button class="text-primary-bg-color text-lg font-bold" onclick="my_modal_4.showModal()">Details</button>
+
+                <dialog id="my_modal_4" class="modal">
+                  <div class="modal-box w-auto max-w-[20rem] md:max-w-[51rem] py-5 md:py-10 lg:py-16 px-6 md:px-36 lg:px-48">
+                    <div class="flex-1 rounded-3xl w-[16rem] md:w-[25rem]">
+                      <div class="space-y-6 mb-8 text-center">
+                        <img class="mx-auto w-40 md:w-64 lg:w-80 h-40 md:h-64 lg:h-80 object-contain" src="./images/fruit9.png" alt="">
+                        <h1 class="text-4xl font-extrabold text-mobile-primary-txt-color">Banana</h1>
+                        <p class="font-medium text-[#2E2E2E99]">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                      </div>
+                      <!-- fruits content ends here -->
+                      <div class="flex justify-center">
+                          <div class="rating rating-md rating-half">
+                            <input type="radio" name="rating-8" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-8" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-8" class="bg-primary-bg-color mask mask-star-2 mask-half-1" checked />
+                            <input type="radio" name="rating-8" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-8" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-8" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-8" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-8" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                            <input type="radio" name="rating-8" class="bg-primary-bg-color mask mask-star-2 mask-half-1" />
+                            <input type="radio" name="rating-8" class="bg-primary-bg-color mask mask-star-2 mask-half-2" />
+                          </div>
+                      </div>
+                       <!-- rating ends here -->
+                      <div class="modal-action justify-center gap-8 mt-10">
+                        <form method="dialog">
+                          <!-- if there is a button in form, it will close the modal -->
+                          <button class="btn capitalize hover:bg-primary-bg-color text-primary-bg-color bg-white hover:text-white border border-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Close</button>
+                        </form>
+                        <button class="btn capitalize hover:bg-white bg-primary-bg-color text-white border hover:border-primary-bg-color hover:text-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </dialog>
+                <!-- modal 4 ends here -->
             </div>
           </div>
           <!-- fruit card 4 -->
         </div>
         <!-- shop all button starts here -->
         <div class="flex justify-center">
-          <button class="btn capitalize bg-primary-bg-color text-white border-0 hover:text-black px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop All</button>
+          <button class="btn capitalize hover:bg-white bg-primary-bg-color text-white border hover:border-primary-bg-color hover:text-primary-bg-color px-4 py-2 lg:px-7 lg:py-5 h-auto font-bold lg:font-extrabold text-lg lg:text-xl">Shop All</button>
         </div>
       </section>
       <!-- deal of the day ends here -->
